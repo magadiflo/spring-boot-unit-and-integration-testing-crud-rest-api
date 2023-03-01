@@ -45,7 +45,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         Optional<Employee> employeeBD = this.employeeRepository.findById(updateEmployee.getId());
         Optional<Employee> employeeEmailBD = this.employeeRepository.findByEmail(updateEmployee.getEmail());
 
-        if (updateEmployee.getEmail() != employeeBD.get().getEmail() && employeeEmailBD.isPresent()) {
+        if (!updateEmployee.getEmail().equals(employeeBD.orElseThrow().getEmail()) && employeeEmailBD.isPresent()) {
             throw new NoSuchElementException(String.format("Update error, employee already exist with given email %s", updateEmployee.getEmail()));
         }
 
