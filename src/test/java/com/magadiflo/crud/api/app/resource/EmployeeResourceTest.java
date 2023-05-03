@@ -23,12 +23,46 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * PRUEBAS UNITARIAS - CRUD API REST
+ * *********************************
+ */
+
+/**
+ * @WebMvcTest :
+ * *************
+ * Usaremos esta anotación para cargar solo la clase EmployeeResource,
+ * al contexto Mvc Test.
+ */
+
+/**
+ * ResultActions :
+ * ***************
+ * Con esta clase manejamos la respuesta del API REST
+ */
 @WebMvcTest(EmployeeResource.class)
 class EmployeeResourceTest {
 
+    /**
+     * MockMvc :
+     * *********
+     * Para realizar llamadas a la API REST
+     */
     @Autowired
     private MockMvc mockMvc;
 
+    /**
+     * @MockBean :
+     * ***********
+     * Estamos usando la anotación @MockBean para agregar objetos
+     * mockeados (simulados) al contexto de la aplicación de Spring.
+     * El mock reemplazará cualquier bean existente del mismo tipo en el
+     * contexto de la aplicación.
+     * <p>
+     * La anotación @MockBean le indica a Spring que cree una instancia
+     * simulada de IEmployeeService y la agregue al contexto de la
+     * aplicación para que se inserte en el EmployeeResource.
+     */
     @MockBean
     private IEmployeeService employeeService;
 
