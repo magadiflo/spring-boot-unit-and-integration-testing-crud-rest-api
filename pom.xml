@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.magadiflo</groupId>
-    <artifactId>spring-boot-unit-testing-crud-rest-api</artifactId>
+    <artifactId>spring-boot-unit-and-integration-testing-crud-rest-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-unit-testing-crud-rest-api</name>
+    <name>spring-boot-unit-and-integration-testing-crud-rest-api</name>
     <description>Demo project for Spring Boot - Unit Testing Crud Api With JUnit and Mockito</description>
     <properties>
         <java.version>17</java.version>

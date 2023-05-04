@@ -26,6 +26,11 @@ import java.util.Optional;
 /**
  * PRUEBAS UNITARIAS - CRUD API REST
  * *********************************
+ *
+ * @WebMvcTest :
+ * *************
+ * Usaremos esta anotación para cargar solo la clase EmployeeResource,
+ * al contexto Mvc Test.
  */
 
 /**
@@ -41,12 +46,16 @@ import java.util.Optional;
  * Con esta clase manejamos la respuesta del API REST
  */
 @WebMvcTest(EmployeeResource.class)
-class EmployeeResourceTest {
+class EmployeeResourceUnitTest {
 
     /**
      * MockMvc :
      * *********
-     * Para realizar llamadas a la API REST
+     * Para realizar llamadas a la API REST. Pero como estamos
+     * realizando PRUEBAS UNITARIAS, esas llamadas serán simuladas (mockeadas).
+     * Para entender, más claramente lo que hace esta clase, ver el
+     * proyecto de Andrés Guzmán de las pruebas unitarias, allí
+     * dejé anotado con más claridad.
      */
     @Autowired
     private MockMvc mockMvc;

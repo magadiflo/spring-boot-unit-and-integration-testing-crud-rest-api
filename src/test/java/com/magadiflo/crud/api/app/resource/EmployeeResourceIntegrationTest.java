@@ -56,7 +56,9 @@ import java.util.List;
  * <br>
  * NOTA: En el curso de Andres Guzmán (para las pruebas de integración) usamos tanto el RestTemplate como el WebClient
  * para poder hacer las peticiones HTTP a nuestras Apis del controlador, mientras que aquí se está usando
- * MockMvc.
+ * MockMvc, que a diferencia de las pruebas unitarias que se hace en este proyecto, allí solo se simula el
+ * llamado a las apis, mientras que en este archivo de pruebas de integración, sí hace el llamado real
+ * para traer los datos de la base de datos.
  */
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
